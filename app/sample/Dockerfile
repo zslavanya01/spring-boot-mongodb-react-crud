@@ -1,8 +1,7 @@
 FROM       ubuntu
 RUN        apt update
 WORKDIR    /app/sample
-COPY       package-lock.json /app *
-COPY       package.json /app *
+COPY       . ./app
 RUN        apt install npm -y
 RUN        npm install
 RUN        npm start
