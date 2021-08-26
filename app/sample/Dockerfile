@@ -1,4 +1,4 @@
-FROM       node:10-alpine
+FROM       ubuntu
 RUN        apt update
 WORKDIR    /app/sample
 COPY       package-lock.json /app
