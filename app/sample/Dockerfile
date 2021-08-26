@@ -1,5 +1,5 @@
 FROM       node:10-alpine
-RUN        apt update -y
+RUN        apt update
 WORKDIR    /app/sample
 COPY       package-lock.json /app
 COPY       package.json /app
