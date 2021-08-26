@@ -1,8 +1,8 @@
 FROM       node:alpine
 WORKDIR    /app
-ENV        PATH /app/node_modules/ .bin:$PATH
+ENV        PATH /app *:$PATH
 COPY      package.json ./
 COPY      package-lock.json ./
-RUN        npm i
+RUN        npm insatll
 COPY      . ./
 CMD        [ "npm" , "start" ]
