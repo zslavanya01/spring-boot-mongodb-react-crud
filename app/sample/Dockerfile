@@ -1,4 +1,3 @@
-FROM       alpine:latest
-ADD        HelloWorld.class HelloWorld.class
-RUN        apk --update add openjdk8-jre
-ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom", "HelloWorld"]
+FROM       ubuntu
+RUN        apt update
+RUN        git clone https://gitlab.com/zelarsoft1/employee.git
