@@ -1,3 +1,9 @@
 FROM       ubuntu
 RUN        apt update
-RUN        git clone https://gitlab.com/zelarsoft1/employee.git
+RUN        apt upgrade
+WORKDIR    /app/sample
+COPY       package-lock.json
+COPY       package.json
+RUN        apt install npm -y
+RUN        npm install
+CMD        ["npm","start"]
